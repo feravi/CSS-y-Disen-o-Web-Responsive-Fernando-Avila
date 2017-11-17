@@ -1,0 +1,201 @@
+body{
+  background-color: #02010A;
+  font-family: Dancing Script;
+  text-align: -webkit-center;
+}
+#contenido{
+  width: 900px;
+  color: white;
+  border: 1px solid black;
+  margin: -5px;
+}
+
+/*Encabezado*/
+header{
+  background-color: #5b7989;
+  display: inline-flex;
+  border-radius: 10px 10px 0 0;
+  animation: animacion 0.7s;
+  width: 100%;
+}
+h1{
+  font-size: 2.2em;
+  padding-left: 10px;
+  text-align: left;
+  width: 50%;
+  text-shadow: 2px 2px 1px #02010a;
+}
+header nav{
+  font-size: 1.2em;
+  text-align: right;
+  width: 50%;
+  word-spacing: 25px;
+  padding-top: 30px;
+  padding-right: 20px
+}
+header a:link, header a:visited {
+  color: white;
+  text-decoration: underline;
+}
+
+/*Animacion header*/
+@-webkit-keyframes animacion{
+  0%{
+    margin-top: 150%;
+  }
+  60%{
+    margin-top: -5%;
+  }
+  100%{
+    margin-top: 0%;
+  }
+}
+
+/*Cuerpo*/
+/*Foto centrada*/
+section .foto{
+  background-color: #82c3a6;
+}
+.foto img{
+  box-shadow: 2px 2px 1px #02010A;
+  width: 80%;
+  margin: 20px;
+}
+
+/*fotos paisaje y retrato pagina principal*/
+section .fotos{
+  background-color: #d5c75f;
+  display: inline-flex;
+}
+.fotos img{
+  width: 80%;
+  margin-top:20px;
+  border: 1px solid black;
+  box-shadow: 2px 2px 1px #02010A;
+}
+.fotos a:link, .fotos a:visited {
+  color: black;
+  font-size: 1.3em;
+}
+
+/*animacion de paisaje y retrato pagina principal*/
+#rotacion:hover{
+  animation: rot 3s;
+  border: none;
+}
+@-webkit-keyframes rot{
+  50%{
+    transform: rotate(10deg);
+    box-shadow: 2px 2px 1px #82c3a6;
+}
+}
+#traslacion:hover {
+  animation: tra 3s;
+  border: none;
+}
+@-webkit-keyframes tra{
+  0%{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+  }
+  50%{
+    box-shadow: 2px 2px 1px #82c3a6;
+    position: relative;
+    left: 20px;
+    bottom: 5px;
+  }
+  100%{
+    position: relative;
+    left: 0px;
+    bottom: 0px;
+  }
+}
+
+/*fotos paisaje y retrato paginas secudarias*/
+section .fotosr{
+  background-color: #d5c75f;
+}
+.fotosr nav{
+  width: 100%;
+}
+.fotosr img {
+  width: 30%;
+  margin: 10px;
+  box-shadow: 2px 2px 1px #02010A;
+}
+/*Efectos de paisaje y retrato*/
+.gray{
+  -webkit-filter:grayscale(100%);
+filter: grayscale(100%);
+}
+.sepia {
+  -webkit-filter:sepia(90%);
+  filter: sepia(90%);
+}
+.blur{
+-webkit-filter:blur(10px);
+filter: blur(10px);
+}
+
+/*Pie de pagina*/
+footer{
+  background-color: #C6d5c5;
+  border-radius: 0 0 10px 10px;
+  display: inline-flex;
+  width: 100%;
+}
+footer nav{
+  text-align: left;
+  width: 100%;
+}
+footer ul{
+  color: black;
+}
+footer li{
+  list-style: none;
+}
+footer a:visited, footer a:link{
+  color: black;
+}
+
+/*Tamaño de pagina menor de 900px*/
+@media all and (max-width: 900px){
+body{
+  100%;
+}
+#contenido{
+  width: 100%;
+  }
+header{
+  display: grid;
+}
+h1{
+  width: 80%;
+  margin-top: 10px;
+  text-align: center;
+}
+header nav {
+  width: 80%;
+  float: none;
+  text-align: center;
+  margin-bottom: 20px;
+}
+section .fotos {
+  display: inline-grid;
+}
+.fotos img{
+  margin-top:10px;
+}
+section .fotosr {
+  display: inline-grid;
+}
+.fotosr img {
+  width: 80%;
+}
+footer{
+  display: inline-block;
+}
+footer nav{
+  width: 60%
+}
